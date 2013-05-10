@@ -64,7 +64,11 @@ NewRelic.prototype.proxy = function(host, port) {
  * @returns {NewRelic} - for chaining
  */
 NewRelic.prototype.errors = function(ignored) {
-
+  process.env['NEW_RELIC_ERROR_COLLECTOR_ENABLED'] = 'true';
+  if (ignored) {
+    process.env['NEW_RELIC_ERROR_COLLECTOR_IGNORE_ERROR_CODES'] = ignored.join(',');
+  }
+  return this;
 };
 
 /**
