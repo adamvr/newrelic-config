@@ -1,7 +1,7 @@
 {
   "name": "newrelic-config",
-  "version": "0.0.0",
-  "description": "Newrelic configurer",
+  "version": "0.0.1",
+  "description": "Newrelic configurator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
