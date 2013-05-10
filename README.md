@@ -3,7 +3,7 @@
 ## Introduction
 
 newrelic-config is a newrelic configurator, wrapping node-newrelic.
-It simplifies the default configuration scheme into a chainable API
+It simplifies the default configuration scheme into a chainable API.
 
 ## Dependencies
 
@@ -56,3 +56,7 @@ Set proxy options
 Enable error tracing
 
 * `ignored` - error codes to ignore
+
+### NewRelic#profile() 
+
+Start profiling!
