@@ -1,0 +1,20 @@
+{
+  "name": "newrelic-config",
+  "version": "0.0.0",
+  "description": "Newrelic configurer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "newrelic",
+    "new",
+    "relic"
+  ],
+  "author": "Adam Rudd",
+  "license": "BSD",
+  "dependencies": {
+    "newrelic": "~0.9.20"
+  }
+}
