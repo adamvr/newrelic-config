@@ -7,7 +7,7 @@ It simplifies the default configuration scheme into a chainable API.
 
 ## Dependencies
 
-* [https://github.com/newrelic/node-newrelic](newrelic)
+* [newrelic](https://github.com/newrelic/node-newrelic)
 
 ## Example
 
