@@ -28,6 +28,29 @@ Complete example:
       .errors([404, 401])
       .profile();
 
+Conditional configuration:
+
+    require('newrelic-config')
+      .key('<key>')
+      .name(process.env.NODE_ENV === 'production' ? 'app' : 'app-dev')
+      .profile()
+
+Using environment variables:
+
+    require('newrelic-config')
+      .key(process.env['NEWRELIC_KEY'])
+      .name(process.env['NEWRELIC_APP_NAME'])
+      .profile()
+
+Using a config file:
+
+    var config = require('./config');
+
+    require('newrelic-config')
+      .key(config.newrelic.key)
+      .name(config.newrelic.name)
+      .profile();
+
 ## Methods
 
 ### NewRelic#name(name)
