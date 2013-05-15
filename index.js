@@ -27,7 +27,6 @@ NewRelic.prototype.name = function (name) {
  * @param {String} key - license key
  * @returns {NewRelic} - for chaining
  */
-
 NewRelic.prototype.key = function (key) {
   process.env['NEW_RELIC_LICENSE_KEY'] = key;
   return this;
@@ -40,9 +39,8 @@ NewRelic.prototype.key = function (key) {
  * @returns {NewRelic} - for chaining
  */
 NewRelic.prototype.log = function (dest, level) {
-  if (!dest) process.env['NEW_RELIC_LOG'] = '/dev/null';
+  process.env['NEW_RELIC_LOG'] = dest ? dest : '/dev/null';
   process.env['NEW_RELIC_LOG_LEVEL'] = level;
-  process.env['NEW_RELIC_LOG'] = dest;
   return this;
 };
 
@@ -79,4 +77,3 @@ NewRelic.prototype.profile = function() {
 };
 
 module.exports = new NewRelic();
-
