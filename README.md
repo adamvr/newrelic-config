@@ -66,6 +66,7 @@ Set new relic license key
 Set new relic logging options
 
 * `dest` - log destination (file, `stderr` or `stdout`)
+* `level` - logging level, option of `error`, `warn`, `info`, `debug` or `trace`
 
 ### NewRelic#proxy(host, port)
 
