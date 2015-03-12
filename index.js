@@ -18,7 +18,7 @@ var NewRelic = function () {
  * @returns {NewRelic} - for chaining
  */
 NewRelic.prototype.name = function (name) {
-  process.env['NEW_RELIC_APP_NAME'] = name; 
+  process.env['NEW_RELIC_APP_NAME'] = name;
   return this;
 };
 
@@ -27,6 +27,7 @@ NewRelic.prototype.name = function (name) {
  * @param {String} key - license key
  * @returns {NewRelic} - for chaining
  */
+
 NewRelic.prototype.key = function (key) {
   process.env['NEW_RELIC_LICENSE_KEY'] = key;
   return this;
@@ -36,11 +37,14 @@ NewRelic.prototype.key = function (key) {
  * log - set log destination
  * @param {String} dest - log file destination, defaults to /dev/null if falsy
  * @param {String} level - logging level {fatal, error, warn, info, debug, trace}
+ * @param {String} ignore - rules to ignore}
  * @returns {NewRelic} - for chaining
  */
-NewRelic.prototype.log = function (dest, level) {
-  process.env['NEW_RELIC_LOG'] = dest ? dest : '/dev/null';
+NewRelic.prototype.log = (dest, level, ignore) {
+  if (!dest) process.env['NEW_RELIC_LOG'] = '/dev/null';
   process.env['NEW_RELIC_LOG_LEVEL'] = level;
+  process.env['NEW_RELIC_LOG'] = dest;
+  process.env['NEW_RELIC_IGNORING_RULES'] = ignore;
   return this;
 };
 
