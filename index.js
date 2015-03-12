@@ -40,7 +40,7 @@ NewRelic.prototype.key = function (key) {
  * @param {String} ignore - rules to ignore}
  * @returns {NewRelic} - for chaining
  */
-NewRelic.prototype.log = (dest, level, ignore) {
+NewRelic.prototype.log = function (dest, level, ignore) {
   process.env['NEW_RELIC_LOG_LEVEL'] = level;
   if (dest) process.env['NEW_RELIC_LOG'] = dest;
   if (ignore) process.env['NEW_RELIC_IGNORING_RULES'] = ignore;
