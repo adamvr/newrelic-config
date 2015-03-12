@@ -41,10 +41,9 @@ NewRelic.prototype.key = function (key) {
  * @returns {NewRelic} - for chaining
  */
 NewRelic.prototype.log = (dest, level, ignore) {
-  if (!dest) process.env['NEW_RELIC_LOG'] = '/dev/null';
   process.env['NEW_RELIC_LOG_LEVEL'] = level;
-  process.env['NEW_RELIC_LOG'] = dest;
-  process.env['NEW_RELIC_IGNORING_RULES'] = ignore;
+  if (dest) process.env['NEW_RELIC_LOG'] = dest;
+  if (ignore) process.env['NEW_RELIC_IGNORING_RULES'] = ignore;
   return this;
 };
 
