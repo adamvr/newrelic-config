@@ -76,7 +76,7 @@ NewRelic.prototype.errors = function(ignored) {
  * profile - start the profiler
  */
 NewRelic.prototype.profile = function() {
-  require('newrelic');
+  return require('newrelic');
 };
 
 module.exports = new NewRelic();
