@@ -61,12 +61,13 @@ Set new relic app name
 
 Set new relic license key
 
-### NewRelic#log(dest, level)
+### NewRelic#log(dest, level, ignore)
 
 Set new relic logging options
 
 * `dest` - log destination (file, `stderr` or `stdout`)
 * `level` - logging level, option of `error`, `warn`, `info`, `debug` or `trace`
+* `ignore` – list of comma-delimited patterns, for example `'^/socket\.io/.*/xhr-polling,ignore_me'`
 
 ### NewRelic#proxy(host, port)
 

@@ -1,20 +1,29 @@
 {
   "name": "newrelic-config",
-  "version": "0.0.1",
   "description": "Newrelic configurator",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": "",
-  "keywords": [
-    "newrelic",
-    "new",
-    "relic"
-  ],
+  "version": "0.1.0",
   "author": "Adam Rudd",
-  "license": "BSD",
+  "contributors": [
+    {
+      "name": "Kiko Beats",
+      "url": "https://github.com/kikobeats"
+    }
+  ],
   "dependencies": {
     "newrelic": ">=0.9.20"
+  },
+  "keywords": [
+    "configurator",
+    "new",
+    "newrelic",
+    "relic",
+    "setup",
+    "tool"
+  ],
+  "license": "BSD",
+  "main": "index.js",
+  "repository": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
